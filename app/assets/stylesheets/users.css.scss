@@ -1,0 +1,36 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#dashboard{
+	margin-left: 690px;
+	vertical-align: top;
+}
+#form_log_out{
+	margin-left: 50px;
+	display: inline;
+	vertical-align: top;
+}
+#edit_user{
+	display: inline;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+#edit_form{
+	margin-top: 50px;
+	margin-left: 10px;
+	width: 700px;
+	display: inline-block;
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+#edit_button{
+	margin-top: 10px;
+	margin-left: 615px;
+}
+#delete_form{
+	display: inline-block;
+	margin-top: 50px;
+	margin-left: 300px;
+}

@@ -1,0 +1,54 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#container{
+	padding: 10px;
+	background-color: lightgray;
+	margin-top: 20px;
+}
+#header{
+	padding-top: 10px;
+}
+#hi{
+	display: inline;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+#edit{
+	margin-left: 800px;
+	vertical-align: top;
+}
+#form_log_out{
+	margin-left: 50px;
+	display: inline;
+	vertical-align: top;
+}
+.events{
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 30px;
+}
+#table-table-hover1{
+	width: 700px;
+	margin-left: 250px;
+	background-color: white;
+}
+#table-table-hover2{
+	width: 700px;
+	margin-left: 250px;
+	background-color: white;
+}
+#add{
+	width: 700px;
+	margin-left: 25px;
+	margin-top: 50px;
+	border-bottom: 2px solid lightgray;
+	padding-bottom: 5px;
+}
+#add_event{
+	margin-bottom: 25px;
+	
+}
+#add_event_btn{
+	margin-left: 600px;
+}

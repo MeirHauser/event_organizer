@@ -1,0 +1,70 @@
+<div class = 'container'>
+	<% if flash[:message] %>
+		<%= flash[:message] %>
+	<% end %>
+	<h1>Welcome to Event Creator</h1>
+	<ul class="nav nav-tabs">
+		<li><a data-toggle="tab" href="#new_user">NEW USER</a></li>
+		<li><a data-toggle="tab" href="#log_in">LOG IN</a></li>
+	</ul>
+	<div class="tab-content">
+		<div id="new_user" class="tab-pane fade in active">
+		  	<h3>NEW USER</h3>
+			<form action='/users' method='post'>
+						<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+					  	<p>
+						  	<label for = 'first_name'>First Name:</label>
+							<input type='text' name='first_name'>
+					  	</p>
+					  	<p>
+						  	<label for = 'last_name'>Last Name:</label>
+							<input type='text' name='last_name'>
+					  	</p>
+					  	<p>
+						  	<label for = 'email'>Email:</label>
+							<input type='text' name='email'>
+					  	</p>
+					  	<p>
+						  	<label for = 'location'>City:</label>
+							<input type='text' name='location'>
+					  	</p>
+					  	<p>
+						  	<label for = 'state'>State:</label>
+							<input type='text' name='state'>
+					  	</p>
+					  	<p>
+						  	<label for = 'password'>Password:</label>
+							<input type='password' name='password'>
+					  	</p>
+					  	<p>
+						  	<label for = 'password_confirmation'>Password Confirmation:</label>
+							<input type='password' name='password_confirmation'>
+					  	</p>
+					  	<input type='submit' value='Submit' id = 'submit'>
+					</form>
+			<% if flash[:errors] %>
+				<% flash[:errors].each do |x| %>
+					<div class="alert alert-warning"><%= x %></div>
+				<% end %>
+			<% end %>
+		</div>	
+		<div id="log_in" class="tab-pane fade">
+			<h1>Log In</h1>
+			<form action = '/sessions' method = 'post'>
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<p>
+					<label for = 'email'>Email:</label>
+					<input id = 'email' type = 'text' name = 'email'>
+			 	</p>
+			 	<p>
+					<label for = 'password'>Password:</label>
+					<input id = 'password' type = 'password' name = 'password'>
+		 	</p>
+		 	<input type = 'submit' value = 'Log In'>
+			</form>
+			<% if flash[:error] %>
+				<div class="alert alert-warning"><%= flash[:error] %></div>
+			<% end %>
+		</div>
+	</div>
+</div>
